@@ -115,22 +115,22 @@ def handle_input():
     )
                             )
 
-    client_osc.send_message(config["inputbool1"], float(
+    client_osc.send_message(config["inputbool1"], int(
         openvr.VRInput().getDigitalActionData(inputbool1,
                                              openvr.k_ulInvalidInputValueHandle).bState
     )
                             )
-    client_osc.send_message(config["inputbool2"], float(
+    client_osc.send_message(config["inputbool2"], int(
         openvr.VRInput().getDigitalActionData(inputbool2,
                                               openvr.k_ulInvalidInputValueHandle).bState
     )
                             )
-    client_osc.send_message(config["inputbool3"], float(
+    client_osc.send_message(config["inputbool3"], int(
         openvr.VRInput().getDigitalActionData(inputbool3,
                                               openvr.k_ulInvalidInputValueHandle).bState
     )
                             )
-    client_osc.send_message(config["inputbool4"], float(
+    client_osc.send_message(config["inputbool4"], int(
         openvr.VRInput().getDigitalActionData(inputbool4,
                                               openvr.k_ulInvalidInputValueHandle).bState
     )
