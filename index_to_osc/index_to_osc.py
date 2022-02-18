@@ -2,6 +2,7 @@ import json
 import openvr
 import sys
 import os
+import shutil
 from pythonosc import udp_client
 client_osc = udp_client.SimpleUDPClient("127.0.0.1", 9000)
 
@@ -38,6 +39,9 @@ inputbool2 = openvr.VRInput().getActionHandle('/actions/bypasser/in/inputbool2')
 inputbool3 = openvr.VRInput().getActionHandle('/actions/bypasser/in/inputbool3')
 inputbool4 = openvr.VRInput().getActionHandle('/actions/bypasser/in/inputbool4')
 
+config_file_path = os.path.join(os.path.join(resource_path('config.json')))
+if not os.path.exists(config_file_path):
+    shutil.copyfile(config_file_path + '.template', config_file_path)
 config = json.load(open(os.path.join(os.path.join(resource_path('config.json')))))
 
 def handle_input():
@@ -50,50 +54,44 @@ def handle_input():
     action_set.ulActionSet = action_set_bypasser
     openvr.VRInput().updateActionState(action_sets)
 
-    client_osc.send_message(config["input2d1x"], float(
-        openvr.VRInput().getAnalogActionData(input2d1,
+    x =  openvr.VRInput().getAnalogActionData(input2d1,
                                              openvr.k_ulInvalidInputValueHandle).x
-    )
-                            )
-    client_osc.send_message(config["input2d2x"], float(
-        openvr.VRInput().getAnalogActionData(input2d2,
+    if x!=0:
+        client_osc.send_message(config["input2d1x"], float(x))
+    x = openvr.VRInput().getAnalogActionData(input2d2,
                                              openvr.k_ulInvalidInputValueHandle).x
-    )
-                            )
-    client_osc.send_message(config["input2d3x"], float(
-        openvr.VRInput().getAnalogActionData(input2d3,
+    if x != 0:
+        client_osc.send_message(config["input2d2x"], float(x))
+    x = openvr.VRInput().getAnalogActionData(input2d3,
                                              openvr.k_ulInvalidInputValueHandle).x
-    )
-                            )
-    client_osc.send_message(config["input2d4x"], float(
-        openvr.VRInput().getAnalogActionData(input2d4,
+    if x != 0:
+        client_osc.send_message(config["input2d3x"], float(x))
+    x = openvr.VRInput().getAnalogActionData(input2d4,
                                              openvr.k_ulInvalidInputValueHandle).x
-    )
-                            )
+    if x != 0:
+        client_osc.send_message(config["input2d4x"], float(x))
 
-    client_osc.send_message(config["input2d1y"], float(
-        openvr.VRInput().getAnalogActionData(input2d1,
+    y = openvr.VRInput().getAnalogActionData(input2d1,
                                              openvr.k_ulInvalidInputValueHandle).y
-    )
-                            )
+    if y != 0:
+        client_osc.send_message(config["input2d1y"], float(y))
 
-    client_osc.send_message(config["input2d2y"], float(
-        openvr.VRInput().getAnalogActionData(input2d2,
+    y = openvr.VRInput().getAnalogActionData(input2d2,
                                              openvr.k_ulInvalidInputValueHandle).y
-    )
-                            )
+    if y != 0:
+        client_osc.send_message(config["input2d2y"], float(y))
 
-    client_osc.send_message(config["input2d3y"], float(
-        openvr.VRInput().getAnalogActionData(input2d3,
+    y = openvr.VRInput().getAnalogActionData(input2d3,
                                              openvr.k_ulInvalidInputValueHandle).y
-    )
-                            )
+    if y != 0:
+        client_osc.send_message(config["input2d3y"], float(y))
 
-    client_osc.send_message(config["input2d4y"], float(
-        openvr.VRInput().getAnalogActionData(input2d4,
+    y = openvr.VRInput().getAnalogActionData(input2d4,
                                              openvr.k_ulInvalidInputValueHandle).y
-    )
-                            )
+    if y != 0:
+        client_osc.send_message(config["input2d4y"], float(y))
+
+
 
     client_osc.send_message(config["input1d1"], float(
         openvr.VRInput().getAnalogActionData(input1d1,
