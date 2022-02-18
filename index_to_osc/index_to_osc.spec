@@ -2,12 +2,15 @@
 
 block_cipher = None
 
-
+added_files = [
+         ( 'bindings', 'bindings' ),
+         ( 'config.json.template', '.' ),
+         ]
 a = Analysis(['index_to_osc.py'],
              pathex=['C:\\Users\\Marian\\Desktop\\VRCHAT_LAUNCH_ADDONS\\index_controller_bypasser\\index_to_osc'],
-             binaries=[],
-             datas=[],
-             hiddenimports=[],
+             binaries=[ (r'C:\Users\Marian\Desktop\VRCHAT_LAUNCH_ADDONS\index_controller_bypasser\venv\Lib\site-packages\openvr\libopenvr_api_64.dll', '.' ), ],
+             datas = added_files,
+             hiddenimports=['ctypes'],
              hookspath=[],
              runtime_hooks=[],
              excludes=[],
