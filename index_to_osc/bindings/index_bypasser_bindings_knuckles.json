@@ -1,0 +1,59 @@
+{
+   "action_manifest_version" : 0,
+   "alias_info" : {},
+   "app_key" : "system.generated.python.exe",
+   "bindings" : {
+      "/actions/bypasser" : {
+         "sources" : [
+            {
+               "inputs" : {
+                  "force" : {
+                     "output" : "/actions/bypasser/in/input1d1"
+                  }
+               },
+               "mode" : "force_sensor",
+               "path" : "/user/hand/left/input/trackpad"
+            },
+            {
+               "inputs" : {
+                  "force" : {
+                     "output" : "/actions/bypasser/in/input1d2"
+                  }
+               },
+               "mode" : "force_sensor",
+               "path" : "/user/hand/right/input/trackpad"
+            },
+            {
+               "inputs" : {
+                  "position" : {
+                     "output" : "/actions/bypasser/in/input2d1"
+                  },
+                  "touch" : {
+                     "output" : "/actions/bypasser/in/inputbool1"
+                  }
+               },
+               "mode" : "trackpad",
+               "path" : "/user/hand/left/input/trackpad"
+            },
+            {
+               "inputs" : {
+                  "position" : {
+                     "output" : "/actions/bypasser/in/input2d2"
+                  },
+                  "touch" : {
+                     "output" : "/actions/bypasser/in/inputbool2"
+                  }
+               },
+               "mode" : "trackpad",
+               "path" : "/user/hand/right/input/trackpad"
+            }
+         ]
+      }
+   },
+   "category" : "steamvr_input",
+   "controller_type" : "knuckles",
+   "description" : "",
+   "name" : "IndexBypasserDefaultBinding",
+   "options" : {},
+   "simulated_actions" : []
+}

@@ -1,0 +1,18 @@
+{
+      "input2d1x": "/avatar/parameters/input2d1x",
+      "input2d1y": "/avatar/parameters/input2d1y",
+      "input2d2x": "/avatar/parameters/input2d2x",
+      "input2d2y": "/avatar/parameters/input2d2y",
+      "input2d3x": "/avatar/parameters/input2d3x",
+      "input2d3y": "/avatar/parameters/input2d3y",
+      "input2d4x": "/avatar/parameters/input2d4x",
+      "input2d4y": "/avatar/parameters/input2d4y",
+      "input1d1": "/avatar/parameters/input1d1",
+      "input1d2": "/avatar/parameters/input1d2",
+      "input1d3": "/avatar/parameters/input1d3",
+      "input1d4": "/avatar/parameters/input1d4",
+      "inputbool1": "/avatar/parameters/inputbool1",
+      "inputbool2": "/avatar/parameters/inputbool2",
+      "inputbool3": "/avatar/parameters/inputbool3",
+      "inputbool4": "/avatar/parameters/inputbool4"
+}

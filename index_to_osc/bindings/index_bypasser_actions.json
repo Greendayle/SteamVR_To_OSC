@@ -1,0 +1,58 @@
+{
+  "default_bindings": [
+		{
+			"controller_type": "knuckles",
+			"binding_url": "index_bypasser_bindings_knuckles.json"
+		}
+    ],
+  "actions": [
+    {
+      "name": "/actions/bypasser/in/input2d1",
+      "type": "vector2"
+    },
+    {
+      "name": "/actions/bypasser/in/input2d2",
+      "type": "vector2"
+    },
+    {
+      "name": "/actions/bypasser/in/input2d3",
+      "type": "vector2"
+    },
+    {
+      "name": "/actions/bypasser/in/input2d4",
+      "type": "vector2"
+    },
+    {
+      "name": "/actions/bypasser/in/input1d1",
+      "type": "vector1"
+    },
+     {
+      "name": "/actions/bypasser/in/input1d2",
+      "type": "vector1"
+    },
+    {
+      "name": "/actions/bypasser/in/input1d3",
+      "type": "vector1"
+    },
+    {
+      "name": "/actions/bypasser/in/input1d4",
+      "type": "vector1"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool1",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool2",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool3",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool4",
+      "type": "boolean"
+    }
+  ]
+}
