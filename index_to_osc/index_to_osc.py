@@ -3,6 +3,7 @@ import openvr
 import sys
 import os
 import shutil
+import time
 from pythonosc import udp_client
 client_osc = udp_client.SimpleUDPClient("127.0.0.1", 9000)
 
@@ -138,3 +139,4 @@ def handle_input():
 
 while True:
     handle_input()
+    time.sleep(0.005)
