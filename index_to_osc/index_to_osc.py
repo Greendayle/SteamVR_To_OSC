@@ -35,10 +35,11 @@ input1d2 = openvr.VRInput().getActionHandle('/actions/bypasser/in/input1d2')
 input1d3 = openvr.VRInput().getActionHandle('/actions/bypasser/in/input1d3')
 input1d4 = openvr.VRInput().getActionHandle('/actions/bypasser/in/input1d4')
 
-inputbool1 = openvr.VRInput().getActionHandle('/actions/bypasser/in/inputbool1')
-inputbool2 = openvr.VRInput().getActionHandle('/actions/bypasser/in/inputbool2')
-inputbool3 = openvr.VRInput().getActionHandle('/actions/bypasser/in/inputbool3')
-inputbool4 = openvr.VRInput().getActionHandle('/actions/bypasser/in/inputbool4')
+bool_amount = 30
+inputbools = []
+for i in range(bool_amount):
+    inputbool = openvr.VRInput().getActionHandle('/actions/bypasser/in/inputbool{}'.format(i + 1))
+    inputbools.append(inputbool)
 
 config_file_path = os.path.join(os.path.join(resource_path('config.json')))
 if not os.path.exists(config_file_path):
@@ -116,26 +117,13 @@ def handle_input():
     )
                             )
 
-    client_osc.send_message(config["inputbool1"], int(
-        openvr.VRInput().getDigitalActionData(inputbool1,
-                                             openvr.k_ulInvalidInputValueHandle).bState
-    )
+    for i in range(bool_amount):
+        client_osc.send_message(config["inputbool{}".format(i+1)], int(
+            openvr.VRInput().getDigitalActionData(inputbools[i],
+                                                 openvr.k_ulInvalidInputValueHandle).bState
+        )
                             )
-    client_osc.send_message(config["inputbool2"], int(
-        openvr.VRInput().getDigitalActionData(inputbool2,
-                                              openvr.k_ulInvalidInputValueHandle).bState
-    )
-                            )
-    client_osc.send_message(config["inputbool3"], int(
-        openvr.VRInput().getDigitalActionData(inputbool3,
-                                              openvr.k_ulInvalidInputValueHandle).bState
-    )
-                            )
-    client_osc.send_message(config["inputbool4"], int(
-        openvr.VRInput().getDigitalActionData(inputbool4,
-                                              openvr.k_ulInvalidInputValueHandle).bState
-    )
-                            )
+
 
 while True:
     handle_input()

@@ -1,10 +1,10 @@
 {
   "default_bindings": [
-		{
-			"controller_type": "knuckles",
-			"binding_url": "index_bypasser_bindings_knuckles.json"
-		}
-    ],
+    {
+      "controller_type": "knuckles",
+      "binding_url": "index_bypasser_bindings_knuckles.json"
+    }
+  ],
   "actions": [
     {
       "name": "/actions/bypasser/in/input2d1",
@@ -26,7 +26,7 @@
       "name": "/actions/bypasser/in/input1d1",
       "type": "vector1"
     },
-     {
+    {
       "name": "/actions/bypasser/in/input1d2",
       "type": "vector1"
     },
@@ -52,6 +52,110 @@
     },
     {
       "name": "/actions/bypasser/in/inputbool4",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool5",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool6",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool7",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool8",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool9",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool10",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool11",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool12",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool13",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool14",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool15",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool16",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool17",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool18",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool19",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool20",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool21",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool22",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool23",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool24",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool25",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool26",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool27",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool28",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool29",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/bypasser/in/inputbool30",
       "type": "boolean"
     }
   ]
